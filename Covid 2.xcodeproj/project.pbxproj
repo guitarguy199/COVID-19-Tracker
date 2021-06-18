@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B0E085E267D09390015AA39 /* SpinnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0E085D267D09390015AA39 /* SpinnerViewController.swift */; };
 		1BA1142C262A1E710082A2A8 /* PickerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA1142B262A1E710082A2A8 /* PickerData.swift */; };
 		C59BE3DC244915E700EBFF05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59BE3DB244915E700EBFF05 /* AppDelegate.swift */; };
 		C59BE3DE244915E700EBFF05 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59BE3DD244915E700EBFF05 /* SceneDelegate.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1B0E085D267D09390015AA39 /* SpinnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerViewController.swift; sourceTree = "<group>"; };
 		1BA1142B262A1E710082A2A8 /* PickerData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerData.swift; sourceTree = "<group>"; };
 		C59BE3D8244915E700EBFF05 /* COVID Data.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "COVID Data.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C59BE3DB244915E700EBFF05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				C59BE3DF244915E700EBFF05 /* ViewController.swift */,
 				C59BE3F624494A4D00EBFF05 /* ResultsVC.swift */,
 				C59BE3F924494DBF00EBFF05 /* AllCountriesVC.swift */,
+				1B0E085D267D09390015AA39 /* SpinnerViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 				C59BE3E0244915E700EBFF05 /* ViewController.swift in Sources */,
 				C59BE3F52449161900EBFF05 /* CovidModel.swift in Sources */,
 				C59BE3F32449160F00EBFF05 /* CovidData.swift in Sources */,
+				1B0E085E267D09390015AA39 /* SpinnerViewController.swift in Sources */,
 				C59BE3F12449160100EBFF05 /* DataManager.swift in Sources */,
 				C59BE3FA24494DBF00EBFF05 /* AllCountriesVC.swift in Sources */,
 				C59BE3DC244915E700EBFF05 /* AppDelegate.swift in Sources */,

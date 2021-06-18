@@ -22,8 +22,8 @@ struct DataManager {
     let covidURL = "https://coronavirus-19-api.herokuapp.com/countries/"
     
     func fetchCountries() {
-        let urlString = "\(covidURL)"
-        performRequest(with: urlString)
+            let urlString = "\(covidURL)"
+            performRequest(with: urlString)
     }
     
     func fetchData(countryName: String) {

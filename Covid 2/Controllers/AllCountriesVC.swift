@@ -17,7 +17,11 @@ class AllCountriesVC: UITableViewController {
     
     
     override func viewWillAppear(_ animated: Bool) {
-        load()
+        DispatchQueue.main.async {
+//            self.createSpinnerView()
+            self.load()
+        }
+
     }
     
     
@@ -26,6 +30,7 @@ class AllCountriesVC: UITableViewController {
         print(placeholder)
         tableView.rowHeight = 200
         self.tableView.reloadData()
+        self.createSpinnerView()
     }
 
     
@@ -41,11 +46,33 @@ class AllCountriesVC: UITableViewController {
 
                 let stuff = data.distance(from: 0, to: 4)
                 data.remove(at: stuff)
-
+            
             self.tableView.reloadData()
 
         }
+        
+
+        
+        
     }
+    
+    func createSpinnerView() {
+        let child = SpinnerViewController()
+        
+        addChild(child)
+        child.view.frame = view.frame
+        view.addSubview(child.view)
+        child.didMove(toParent: self)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            child.willMove(toParent: nil)
+                    child.view.removeFromSuperview()
+                    child.removeFromParent()
+        }
+        
+        
+    }
+    
     
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -57,15 +84,7 @@ class AllCountriesVC: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         let countryData = data[indexPath.row]
     
-//            if countryData.totalTests == 0 {
-//                     data.remove(at: 4)
-//                 }
-//                 
-//                 if countryData.country == "" {
-//                     data.remove(at: 4)
-//                 }
-     
-        print(countryData.country)
+
         let arrayTwo = "Today's Cases: " + String(countryData.todayCases?.withCommas() ?? "N/A")
             + " \nToday's Deaths: " + String(countryData.todayDeaths?.withCommas() ?? "N/A")
             + " \nTotal Tested: " + String(countryData.totalTests?.withCommas() ?? "N/A")
